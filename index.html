@@ -10,7 +10,7 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
 
-var socket=io.connect('http://stream-git-rt.apps.us-east-1.starter.openshift-online.com/');
+var socket=io.connect('http://stream-git-rt.apps.us-east-1.starter.openshift-online.com');
 var imgChunks=[];
 socket.on('img-chunk', function(chunk){
 var img=document.getElementById('img-stream2');
