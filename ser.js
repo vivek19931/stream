@@ -36,6 +36,7 @@ socket.emit('img-chunk',chunk);
 readStream.on('end', function(){
 console.log('image loaded');
 });
+})
 });
 
 
