@@ -7,7 +7,7 @@ fs=require('fs'),
 path=require('path'),
 server,io;
 app.get('/', function(req,res){
-res.sendFile(__dirname+ '/index.html');
+res.sendFile('/index.html');
 server=http.Server(app);
 server.Listen(8080);
 io=socketIO(server);
@@ -23,7 +23,7 @@ io.on('connection', function(socket){
 	
 	
 	
-var readStream=fs.createReadStream(path.resolve(__dirname, './woodchunck.jpg'),{
+var readStream=fs.createReadStream(path.resolve('./woodchunck.jpg'),{
 encoding:'binary'
 }), chunks=[];
 readStream.on('readable', function(){
