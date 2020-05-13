@@ -9,7 +9,7 @@ path=require('path'),
 server,io;
  server = http.createServer(app);
 const port = process.env.PORT || 8080
-const publicPath = path.join(__dirname, '/../public');
+const publicPath = path.join(__dirname+, '/index.html');
 
 
 
