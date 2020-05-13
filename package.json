@@ -17,6 +17,12 @@
     "express": "^4.16.4",
     "moment": "^2.23.0",
     "socket.io": "^2.2.0"
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "http": "^0.0.1-security"
+    
+    
+    
   },
   "devDependencies": {
     "expect": "^23.6.0",
