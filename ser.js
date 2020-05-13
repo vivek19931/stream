@@ -5,12 +5,15 @@ http=require('http'),
 socketIO=require('socket.io'),
 fs=require('fs'),
 path=require('path'),
+    
 server,io;
+let server = http.createServer(app);
+const port = process.env.PORT || 8080
 const publicPath = path.join(__dirname, '/../public');
 
-server=http.Server(app);
-server.Listen(8080);
-io=socketIO(server);
+
+
+io=socketIO(port);
 io.on('connection', function(socket){
 	
 	
@@ -37,6 +40,11 @@ readStream.on('end', function(){
 console.log('image loaded');
 })
 });
+
+
+server.listen(port, ()=>{
+  console.log(`Server is up on port ${port}`);
+})
 
 
 
