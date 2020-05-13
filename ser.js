@@ -23,8 +23,7 @@ io.on('connection', function(socket){
 	
 	
 	
-	
-	var readStream=fs.createReadStream(path.resolve(__dirname, './woodchunck.jpg'),{
+var readStream=fs.createReadStream(path.resolve(__dirname, './woodchunck.jpg'),{
 encoding:'binary'
 }), chunks=[];
 readStream.on('readable', function(){
@@ -36,6 +35,7 @@ socket.emit('img-chunk',chunk);
 });
 readStream.on('end', function(){
 console.log('image loaded');
+})
 });
 
 
