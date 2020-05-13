@@ -6,8 +6,8 @@ socketIO=require('socket.io'),
 fs=require('fs'),
 path=require('path'),
 server,io;
-app.get('/', function(req,res){
-res.sendFile('/index.html');
+const publicPath = path.join(__dirname, '/../public');
+
 server=http.Server(app);
 server.Listen(8080);
 io=socketIO(server);
@@ -35,8 +35,8 @@ socket.emit('img-chunk',chunk);
 });
 readStream.on('end', function(){
 console.log('image loaded');
-});
 })
 });
+
 
 
