@@ -6,18 +6,7 @@
 <title></title>
 </head>
 <body>
-<img id="img-stream2" src=""/>
-<script src="/socket.io/socket.io.js"></script>
-<script>
 
-var socket;
-var imgChunks=[];
-socket.on('img-chunk', function(chunk){
-var img=document.getElementById('img-stream2');
-imgChunks.push(chunk);
-img.setAttribute('src', 'data:image/jpeg;base64,'+ window.btoa(imgChunks));
-});
-</script>
 
 <p>hiiiiiiiiiii</p>
 </body>
