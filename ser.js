@@ -1,3 +1,4 @@
+
 var express=require('express'),
 app=express(),
 http=require('http'),
@@ -7,7 +8,6 @@ path=require('path'),
 server,io;
 app.get('/', function(req,res){
 res.sendFile(__dirname+ '/index.html');
-});
 server=http.Server(app);
 server.Listen(8080);
 io=socketIO(server);
