@@ -7,7 +7,7 @@ fs=require('fs'),
 path=require('path'),
     
 server,io;
-let server = http.createServer(app);
+ server = http.createServer(app);
 const port = process.env.PORT || 8080
 const publicPath = path.join(__dirname, '/../public');
 
