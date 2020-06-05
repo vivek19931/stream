@@ -45,7 +45,7 @@ io.on('connection', (socket)=>{
    })
 }) 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 var server = http.listen(port, () => {
    console.log(`app listening at port ${server.address().port}`)
 })
